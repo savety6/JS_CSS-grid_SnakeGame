@@ -9,7 +9,7 @@ const gameBoard = document.getElementById('game-board');
 function main(currTime){
     if (gameOver) {
         if (confirm(`You lose(skore: ${snakeLength()}) press ok to restart the game`)) {
-            window.location.reload();
+            window.location.reload()
         }
         return;
     }
