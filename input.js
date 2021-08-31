@@ -6,6 +6,8 @@ window.addEventListener('touchstart', (evt) => {
     startingY = evt.touches[0].clientY;
 })
 window.addEventListener('touchmove', (evt) => {
+    evt.preventDefault();
+    evt.stopImmediatePropagation();
     movingX = evt.touches[0].clientX;
     movingY = evt.touches[0].clientY;
 })
