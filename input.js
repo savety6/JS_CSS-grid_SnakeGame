@@ -12,20 +12,20 @@ window.addEventListener('touchmove', (evt) => {
     movingY = evt.touches[0].clientY;
 })
 window.addEventListener('touchend', (evt) => {
-    if(startingX + 100 < movingX) {
+    if(startingX + 50 < movingX) {
         if (lastInputDirection.x !== 0) return;
             inputDirection = {x:1, y:0};
     }
-    else if(startingX - 100 > movingX) {
+    else if(startingX - 50 > movingX) {
         if (lastInputDirection.x !== 0) return;
             inputDirection = {x:-1, y:0};
     }
 
-    if (startingY + 100 < movingY) {
+    if (startingY + 50 < movingY) {
         if (lastInputDirection.y !== 0) return;
             inputDirection = {x:0, y:1};
     }
-    else if(startingY - 100 > movingY) {
+    else if(startingY - 50 > movingY) {
         if (lastInputDirection.y !== 0) return;
             inputDirection = {x:0, y:-1};
     }
